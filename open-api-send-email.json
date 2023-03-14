@@ -1,0 +1,45 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+      "title": "WorkflowTestServer",
+      "version": "1.0"
+    },
+    "paths": {
+      "/Email/send-email": {
+        "post": {
+          "tags": [
+            "Email"
+          ],
+          "operationId": "SendEmail",
+          "parameters": [
+            {
+              "name": "email",
+              "in": "query",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
+        }
+      },
+      "/api/v1/HealthCheck": {
+        "get": {
+          "tags": [
+            "HealthCheck"
+          ],
+          "operationId": "Health Check",
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
+        }
+      }
+    },
+    "components": { }
+  }
